@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#bd001c">
+
+<title>Redstone Holdings | Motorcycle Spare Parts</title>
+<meta name="description" content="Affordable, high-quality Aldrich aftermarket motorcycle spare parts for Honda Ace, Bajaj, Hero Eco and Bigboy motorcycles in South Africa.">
+
+<style>
+:root {
+  --red: #c90020;
+  --black: #111;
+  --dark: #202020;
+  --grey: #f3f3f3;
+  --white: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: white;
+}
+header {
+  background: var(--black);
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: var(--red);
+}
+.header-contact {
+  font-size: 14px;
+}
+.header-contact a {
+  color: white;
+  text-decoration: none;
+}
+.topbar {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.hero {
+  background: linear-gradient(120deg, #101010, #303030, #750014);
+  color: white;
+  padding: 65px 7%;
+}
+.hero-content {
+  max-width: 760px;
+}
+.hero small {
+  color: #ff6178;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.hero h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  line-height: 1.08;
+  margin: 17px 0;
+}
+.hero p {
+  color: #ddd;
+  line-height: 1.8;
+  max-width: 600px;
+  font-size: 16px;
+}
+.button {
+  display: inline-block;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button:hover {
+  background: #990018;
+}
+.section {
+  padding: 38px 5%;
+}
+.section-title {
+  font-size: 27px;
+  margin: 0 0 9px;
+}
+.section-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 23px;
+}
+.models {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+.model {
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 22px 10px;
+  text-align: center;
+  background: white;
+}
+.model .bike {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.model h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.model p {
+  font-size: 12px;
+  color: #777;
+  margin: 5px 0;
+}
+.brand-section {
+  background: #f2f2f2;
+}
+.brand-box {
+  background: white;
+  border-left: 5px solid var(--red);
+  padding: 22px;
+  border-radius: 6px;
+}
+.brand-box h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+.brand-box p {
+  line-height: 1.8;
+  color: #555;
+}
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.delivery-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px 8px;
+  background: white;
+}
+.delivery-card .delivery-icon {
+  font-size: 35px;
+  margin-bottom: 9px;
+}
+.delivery-card h3 {
+  font-size: 15px;
+  margin: 5px 0;
+}
+.delivery-card p {
+  font-size: 11px;
+  color: #777;
+  margin: 5px 0;
+}
+.shop {
+  background: #f3f3f3;
+}
+.shop-tools {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.shop-tools input,
+.shop-tools select {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+}
+.shop-tools input {
+  flex: 1;
+  min-width: 180px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.product {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product-image {
+  height: 115px;
+  background: #222;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 48px;
+}
+.product-info {
+  padding: 13px;
+}
+.product-info h3 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.product-info p {
+  font-size: 12px;
+  color: #777;
+  margin: 0 0 10px;
+}
+.price {
+  color: var(--red);
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.add-button {
+  width: 100%;
+  background: var(--black);
+  color: white;
+  border: none;
+  padding: 11px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.add-button:hover {
+  background: var(--red);
+}
+.cart-section {
+  background: white;
+}
+.cart-box {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 8px;
+}
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.qty button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 5px 9px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.remove {
+  color: var(--red);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.form-grid textarea {
+  min-height: 75px;
+}
+.full {
+  grid-column: 1 / -1;
+}
+#addressField {
+  display: none;
+}
+.contact {
+  background: #151515;
+  color: white;
+  padding: 40px 5%;
+}
+.contact h2 {
+  font-size: 27px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+.contact-person {
+  background: #252525;
+  padding: 20px;
+  border-radius: 7px;
+}
+.contact-person h3 {
+  color: white;
+  margin-top: 0;
+}
+.contact-person a,
+.email-link {
+  color: #ff6479;
+  text-decoration: none;
+}
+.contact p {
+  color: #ccc;
+  line-height: 1.8;
+}
+footer {
+  background: #080808;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+.empty {
+  color: #777;
+  font-size: 14px;
+}
+@media(max-width: 700px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .models,
+  .delivery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 420px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .full {
+    grid-column: auto;
+  }
+  .hero {
+    padding: 45px 6%;
+  }
+  .product-info {
+    padding: 9px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">REDSTONE <span>HOLDINGS</span></div>
+  <div class="header-contact">
+    <a href="mailto:tshidisomolomo26@gmail.com">CONTACT US</a>
+  </div>
+</header>
+
+<div class="topbar">
+  MOTORCYCLE SPARE PARTS | SOUTH AFRICA
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <small>YOUR MOTORCYCLE SPARE PARTS SUPPLIER</small>
+    <h1>QUALITY PARTS. AFFORDABLE PRICES.</h1>
+    <p>
+      Redstone Holdings supplies Aldrich high-quality aftermarket
+      motorcycle spare parts at affordable prices.
+      We specialise in spare parts for Honda Ace, Bajaj,
+      Hero Eco and Bigboy motorcycles.
+    </p>
+    <a href="#shop" class="button">VIEW SPARE PARTS</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Motorcycles We Supply Parts For</h2>
+  <p class="section-description">
+    We sell spare parts for all four of these motorcycle ranges.
+    Contact us to confirm compatibility and availability.
+  </p>
+
+  <div class="models">
+    <div class="model">
+      <div class="bike">🏍️</div>
+      <h3>Honda Ace</h3>
+      <p>Motorcycle spare parts</p>
+    </div>
+
+    <div class="model">
+      <div class="bike">🏍️</div>
+      <h3>Bajaj</h3>
+      <p>Motorcycle spare parts</p>
+    </div>
+
+    <div class="model">
+      <div class="bike">🏍️</div>
+      <h3>Hero Eco</h3>
+      <p>Motorcycle spare parts</p>
+    </div>
+
+    <div class="model">
+      <div class="bike">🏍️</div>
+      <h3>Bigboy</h3>
+      <p>Motorcycle spare parts</p>
+    </div>
+  </div>
+</section>
+
+<section class="section brand-section">
+  <div class="brand-box">
+    <h3>ALDRICH AFTERMARKET MOTORCYCLE PARTS</h3>
+    <p>
+      We offer Aldrich high-quality aftermarket motorcycle
+      spare parts at affordable prices. Our aim is to help
+      motorcycle owners and delivery-bike operators find
+      the spare parts they need without overspending.
+    </p>
+    <a href="#shop" class="button">SHOP SPARE PARTS</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Delivery Bike Operators We Support</h2>
+  <p class="section-description">
+    We supply motorcycle spare parts for motorcycles used
+    by delivery operators. These are examples of delivery
+    brands whose riders may need motorcycle spares.
+  </p>
+
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <div class="delivery-icon">🛵</div>
+      <h3>Uber Eats</h3>
+      <p>Delivery bike spare parts</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🛵</div>
+      <h3>Sixty60</h3>
+      <p>Delivery bike spare parts</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🛵</div>
+      <h3>ASAP</h3>
+      <p>Delivery bike spare parts</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🛵</div>
+      <h3>Mr D</h3>
+      <p>Delivery bike spare parts</p>
+    </div>
+  </div>
+</section>
+
+<section class="section shop" id="shop">
+  <h2 class="section-title">Motorcycle Spare Parts Catalogue</h2>
+  <p class="section-description">
+    Browse our spare parts and add the items you need to your order.
+    Prices and stock availability are confirmed by our team.
+  </p>
+
+  <div class="shop-tools">
+    <input id="search" type="search" placeholder="Search motorcycle spare parts...">
+    <select id="filter">
+      <option value="All">All parts</option>
+      <option>Engine</option>
+      <option>Clutch</option>
+      <option>Brakes</option>
+      <option>Drive</option>
+      <option>Electrical</option>
+      <option>Service</option>
+      <option>Controls</option>
+    </select>
+  </div>
+
+  <div class="products" id="products"></div>
+</section>
+
+<section class="section cart-section" id="cart">
+  <h2 class="section-title">Your Spare Parts Order</h2>
+  <p class="section-description">
+    Add your required products and send your order to Raymond or Francis.
+  </p>
+
+  <div class="cart-box">
+    <div id="cartItems">
+      <p class="empty">Your cart is empty.</p>
+    </div>
+
+    <h3 id="cartCount">Items: 0</h3>
+
+    <p class="section-description">
+      Our team will confirm prices, stock and delivery charges.
+    </p>
+
+    <div class="form-grid">
+      <input id="customerName" placeholder="Your full name">
+      <input id="customerPhone" type="tel" placeholder="Your phone number">
+
+      <select id="bikeModel" class="full">
+        <option value="">Select your motorcycle</option>
+        <option>Honda Ace</option>
+        <option>Bajaj</option>
+        <option>Hero Eco</option>
+        <option>Bigboy</option>
+      </select>
+
+      <select id="delivery" class="full">
+        <option value="Collection">Collection</option>
+        <option value="Nationwide courier delivery">Nationwide courier delivery</option>
+      </select>
+
+      <div id="addressField" class="full">
+        <textarea id="customerAddress" placeholder="Your delivery address"></textarea>
+      </div>
+
+      <textarea id="notes" class="full" placeholder="Additional spare parts information (optional)"></textarea>
+
+      <button class="button full" onclick="sendOrder('Raymond')">
+        ORDER VIA RAYMOND
+      </button>
+
+      <button class="button full" style="background:#333" onclick="sendOrder('Francis')">
+        ORDER VIA FRANCIS
+      </button>
+
+      <button class="button full" style="background:#555" onclick="emailOrder()">
+        SEND ORDER BY EMAIL
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Redstone Holdings</h2>
+  <p>
+    For motorcycle spare parts, product availability,
+    prices and orders, contact our team.
+  </p>
+
+  <div class="contact-grid">
+    <div class="contact-person">
+      <h3>Raymond</h3>
+      <p>Business contact</p>
+      <p>082 342 3940</p>
+      <a href="https://wa.me/27823423940">WHATSAPP RAYMOND</a>
+    </div>
+
+    <div class="contact-person">
+      <h3>Francis</h3>
+      <p>Business contact</p>
+      <p>076 019 8516</p>
+      <a href="https://wa.me/27760198516">WHATSAPP FRANCIS</a>
+    </div>
+  </div>
+
+  <p>
+    Email:
+    <a class="email-link" href="mailto:tshidisomolomo26@gmail.com">
+      tshidisomolomo26@gmail.com
+    </a>
+  </p>
+  <p>Collection and nationwide courier delivery available.</p>
+</section>
+
+<footer>
+  © <span id="year"></span> REDSTONE HOLDINGS<br>
+  Motorcycle Spare Parts | Honda Ace | Bajaj | Hero Eco | Bigboy
+</footer>
+
+<script>
+const products = [
+  {id:1,name:"Motorcycle Piston Kit",category:"Engine",icon:"⚙️"},
+  {id:2,name:"Cylinder Block",category:"Engine",icon:"🔩"},
+  {id:3,name:"Engine Gasket Set",category:"Engine",icon:"⚙️"},
+  {id:4,name:"Clutch Plates",category:"Clutch",icon:"🔧"},
+  {id:5,name:"Clutch Cable",category:"Controls",icon:"🔩"},
+  {id:6,name:"Brake Shoes",category:"Brakes",icon:"🛑"},
+  {id:7,name:"Brake Cable",category:"Controls",icon:"🔧"},
+  {id:8,name:"Chain and Sprocket Kit",category:"Drive",icon:"⛓️"},
+  {id:9,name:"Front Sprocket",category:"Drive",icon:"⚙️"},
+  {id:10,name:"CDI Unit",category:"Electrical",icon:"⚡"},
+  {id:11,name:"Stator Coil",category:"Electrical",icon:"🔌"},
+  {id:12,name:"Indicator Set",category:"Electrical",icon:"💡"},
+  {id:13,name:"Spark Plug",category:"Service",icon:"🔩"},
+  {id:14,name:"Air Filter",category:"Service",icon:"🌬️"},
+  {id:15,name:"Throttle Cable",category:"Controls",icon:"🔧"},
+  {id:16,name:"Motorcycle Mirrors",category:"Controls",icon:"🏍️"}
+];
+
+let cart = [];
+
+function showProducts() {
+  const search = document.getElementById("search").value.toLowerCase();
+  const category = document.getElementById("filter").value;
+
+  const filtered = products.filter(p =>
+    p.name.toLowerCase().includes(search) &&
+    (category === "All" || p.category === category)
+  );
+
+  document.getElementById("products").innerHTML =
+    filtered.length
+    ? filtered.map(p => `
+      <div class="product">
+        <div class="product-image">${p.icon}</div>
+        <div class="product-info">
+          <h3>${p.name}</h3>
+          <p>${p.category} | Motorcycle spare part</p>
+          <div class="price">Ask for price</div>
+          <button class="add-button" onclick="addToCart(${p.id})">
+            ADD TO ORDER
+          </button>
+        </div>
+      </div>
+    `).join("")
+    : '<p class="empty">No matching spare parts found.</p>';
+}
+
+function addToCart(id) {
+  const item = cart.find(p => p.id === id);
+
+  if (item) {
+    item.qty++;
+  } else {
+    cart.push({
+      ...products.find(p => p.id === id),
+      qty: 1
+    });
+  }
+
+  showCart();
+}
+
+function changeQty(id, amount) {
+  const item = cart.find(p => p.id === id);
+  if (!item) return;
+
+  item.qty += amount;
+
+  if (item.qty <= 0) {
+    cart = cart.filter(p => p.id !== id);
+  }
+
+  showCart();
+}
+
+function showCart() {
+  const container = document.getElementById("cartItems");
+  const count = cart.reduce((sum,p) => sum + p.qty,0);
+
+  document.getElementById("cartCount").textContent =
+    "Items: " + count;
+
+  if (!cart.length) {
+    container.innerHTML = '<p class="empty">Your cart is empty.</p>';
+    return;
+  }
+
+  container.innerHTML = cart.map(p => `
+    <div class="cart-row">
+      <div>
+        <strong>${p.name}</strong><br>
+        <small>Ask for price</small>
+      </div>
+      <div class="qty">
+        <button onclick="changeQty(${p.id},-1)">−</button>
+        ${p.qty}
+        <button onclick="changeQty(${p.id},1)">+</button>
+        <button class="remove" onclick="changeQty(${p.id},-${p.qty})">
+          Remove
+        </button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function getOrderMessage() {
+  if (!cart.length) {
+    alert("Please add spare parts to your order.");
+    return null;
+  }
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const bike = document.getElementById("bikeModel").value;
+  const delivery = document.getElementById("delivery").value;
+  const address = document.getElementById("customerAddress").value.trim();
+  const notes = document.getElementById("notes").value.trim();
+
+  if (!name || !phone || !bike) {
+    alert("Please enter your name, phone number and motorcycle model.");
+    return null;
+  }
+
+  if (delivery !== "Collection" && !address) {
+    alert("Please enter your delivery address.");
+    return null;
+  }
+
+  let message = "NEW SPARE PARTS ORDER - REDSTONE HOLDINGS\n\n";
+  message += "Customer: " + name + "\n";
+  message += "Phone: " + phone + "\n";
+  message += "Motorcycle: " + bike + "\n";
+  message += "Delivery: " + delivery + "\n";
+
+  if (delivery !== "Collection") {
+    message += "Address: " + address + "\n";
+  }
+
+  message += "\nSPARE PARTS REQUIRED:\n";
+
+  cart.forEach(p => {
+    message += p.name + " x " + p.qty + "\n";
+  });
+
+  message += "\nPlease confirm availability and prices.";
+
+  if (notes) {
+    message += "\nAdditional information: " + notes;
+  }
+
+  return message;
+}
+
+function sendOrder(person) {
+  const message = getOrderMessage();
+  if (!message) return;
+
+  const number = person === "Raymond"
+    ? "27823423940"
+    : "27760198516";
+
+  window.location.href =
+    "https://wa.me/" + number +
+    "?text=" + encodeURIComponent(message);
+}
+
+function emailOrder() {
+  const message = getOrderMessage();
+  if (!message) return;
+
+  window.location.href =
+    "mailto:tshidisomolomo26@gmail.com" +
+    "?subject=" + encodeURIComponent("Redstone Holdings Spare Parts Order") +
+    "&body=" + encodeURIComponent(message);
+}
+
+document.getElementById("search").addEventListener("input", showProducts);
+document.getElementById("filter").addEventListener("change", showProducts);
+
+document.getElementById("delivery").addEventListener("change", function() {
+  document.getElementById("addressField").style.display =
+    this.value === "Collection" ? "none" : "block";
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+showProducts();
+showCart();
+</script>
+
+</body>
+</html>
